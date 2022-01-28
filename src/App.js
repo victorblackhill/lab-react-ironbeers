@@ -1,16 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import {Routes, Route, Link} from "react-router-dom"
+import {Routes, Route, Link,useLocation} from "react-router-dom"
 import Home from "./components/Home.jsx"
 import Beers from "./components/Beers.jsx"
 import RandomBeer from "./components/RandomBeer.jsx"
 import NewBeer from "./components/NewBeer.jsx"
 
-function App() {
+
+function App(props) {
+
+  const location = useLocation()
+  
   return (<>
-    <div>
-      <Link to="/">Beers to Home</Link>
-    </div>
+    <header>
+     { !(location.pathname === "/") && <Link to="/"><img src ="/assets/header.png"></img></Link> } 
+    </header>
     <Routes>
       <Route path="/" element={ <Home/> }/>
       <Route path="/beers" element={ <Beers/> }/>

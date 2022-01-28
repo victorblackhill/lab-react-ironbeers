@@ -13,6 +13,24 @@
   }
 }
 
+.home-div{
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.one-div{
+  margin:5px;
+  margin-bottom:15px;
+  margin-right:10px
+}
+
+.one-div h1{
+  margin:0px
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
